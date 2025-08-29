@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { Menu, X, Download, Github, Linkedin, Code, FileText, Trophy, MapPin } from 'lucide-react';
 
 const Header = () => {
@@ -54,6 +55,7 @@ const Header = () => {
     { label: 'Home', id: 'hero' },
     { label: 'About', id: 'about' },
     { label: 'Skills', id: 'skills' },
+    { label: 'Platforms', id: 'platforms' },
     { label: 'Projects', id: 'projects' },
     { label: 'Education', id: 'education' },
     { label: 'Experience', id: 'experience' },
@@ -87,18 +89,26 @@ const Header = () => {
 
         {/* Social Links & Resume Button */}
         <div className="hidden md:flex items-center space-x-4">
-          {socialLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 hover:text-primary transition-colors"
-              aria-label={link.label}
-            >
-              <link.icon className="w-5 h-5" />
-            </a>
-          ))}
+          <TooltipProvider>
+            {socialLinks.map((link) => (
+              <Tooltip key={link.label}>
+                <TooltipTrigger asChild>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 hover:text-primary transition-colors"
+                    aria-label={link.label}
+                  >
+                    <link.icon className="w-5 h-5" />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{link.label}</p>
+                </TooltipContent>
+              </Tooltip>
+            ))}
+          </TooltipProvider>
           <Button variant="outline" size="sm" className="ml-4">
             <Download className="w-4 h-4 mr-2" />
             Resume

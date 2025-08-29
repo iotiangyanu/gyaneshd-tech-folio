@@ -73,9 +73,11 @@ const Hero = () => {
             <div className="relative">
               <div className="w-80 h-80 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 p-2">
                 <div className="w-full h-full rounded-full bg-gradient-to-br from-primary to-accent p-1">
-                  <div className="w-full h-full rounded-full bg-muted flex items-center justify-center text-6xl font-bold text-primary animate-float">
-                    GD
-                  </div>
+                  <img 
+                    src="/src/assets/profile-photo.jpg" 
+                    alt="Gyanesh Dwivedi - CSE IoT Student" 
+                    className="w-full h-full rounded-full object-cover animate-float"
+                  />
                 </div>
               </div>
               

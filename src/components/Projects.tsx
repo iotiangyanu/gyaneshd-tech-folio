@@ -4,6 +4,9 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Github, ExternalLink, Cpu, CloudRain, BarChart3, Eye } from 'lucide-react';
+import esp8266Image from '@/assets/esp8266-robot.jpg';
+import weatherImage from '@/assets/weather-monitoring.jpg';
+import airlineImage from '@/assets/airline-dashboard.jpg';
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<any>(null);
@@ -15,7 +18,7 @@ const Projects = () => {
       shortDescription: 'Remote and voice-controlled robot using Android app with Wi-Fi connectivity',
       fullDescription: 'Developed an intelligent robot controlled both remotely and via voice commands through a custom Android application. The project demonstrates seamless integration between hardware (ESP8266 microcontroller) and software (Android app) with Wi-Fi communication protocols.',
       icon: Cpu,
-      image: '/placeholder.svg?height=200&width=300',
+      image: esp8266Image,
       technologies: ['ESP8266', 'Arduino', 'Android Development', 'Wi-Fi Communication', 'Voice Recognition'],
       problemSolved: 'Creating an accessible and user-friendly robotic control system that can be operated through multiple input methods',
       approach: 'Utilized ESP8266 for wireless connectivity, implemented voice recognition in Android app, and designed a responsive robot chassis with motor control systems',
@@ -34,7 +37,7 @@ const Projects = () => {
       shortDescription: 'Real-time weather monitoring using DHT11 sensor, Firebase, and mobile app',
       fullDescription: 'Built a comprehensive weather monitoring system that collects real-time environmental data using DHT11 temperature and humidity sensors. The system stores data in Firebase and provides access through a mobile application for remote monitoring.',
       icon: CloudRain,
-      image: '/placeholder.svg?height=200&width=300',
+      image: weatherImage,
       technologies: ['DHT11 Sensor', 'Firebase', 'Mobile App Development', 'Real-time Database', 'Arduino'],
       problemSolved: 'Providing real-time environmental monitoring solution for remote locations with data logging capabilities',
       approach: 'Integrated DHT11 sensors with microcontroller, established Firebase connection for data storage, and developed mobile interface for data visualization',
@@ -53,7 +56,7 @@ const Projects = () => {
       shortDescription: 'Interactive Power BI dashboard analyzing airline customer data and trends',
       fullDescription: 'Designed and developed an interactive Power BI dashboard to visualize airline customer data, focusing on demographics, travel trends, satisfaction metrics, and class preferences. The dashboard provides actionable insights for business decision-making.',
       icon: BarChart3,
-      image: '/placeholder.svg?height=200&width=300',
+      image: airlineImage,
       technologies: ['Power BI', 'Data Visualization', 'Data Analytics', 'Business Intelligence', 'SQL'],
       problemSolved: 'Transforming raw airline data into meaningful insights for business strategy and customer satisfaction improvement',
       approach: 'Cleaned and processed large datasets, created interactive visualizations, and implemented filtering systems for dynamic data exploration',
