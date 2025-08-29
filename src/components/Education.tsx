@@ -106,7 +106,7 @@ const Education = () => {
                     </div>
                     <div className="flex items-center gap-2 text-sm">
                       <TrendingUp className="w-4 h-4 text-primary" />
-                      <span className="font-medium">{edu.score}</span>
+                      <span className="font-medium">{}</span>
                       <span className="text-muted-foreground">({edu.status})</span>
                     </div>
                   </div>
