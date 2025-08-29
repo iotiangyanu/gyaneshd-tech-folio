@@ -23,33 +23,8 @@ const Header = () => {
     }
   };
 
-  const socialLinks = [
-    { 
-      href: 'https://linkedin.com/in/gyaneshdwivedi', 
-      icon: Linkedin, 
-      label: 'LinkedIn' 
-    },
-    { 
-      href: 'https://github.com/gyaneshdwivedi', 
-      icon: Github, 
-      label: 'GitHub' 
-    },
-    { 
-      href: 'https://leetcode.com/u/gyaneshdwivedi/', 
-      icon: Code, 
-      label: 'LeetCode' 
-    },
-    { 
-      href: 'https://www.geeksforgeeks.org/user/gyaneshdwivedi/', 
-      icon: FileText, 
-      label: 'GeeksforGeeks' 
-    },
-    { 
-      href: 'https://www.codechef.com/users/gyaneshdwivedi', 
-      icon: Trophy, 
-      label: 'CodeChef' 
-    }
-  ];
+
+  
 
   const navItems = [
     { label: 'Home', id: 'hero' },
