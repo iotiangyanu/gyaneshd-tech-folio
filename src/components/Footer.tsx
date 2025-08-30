@@ -70,11 +70,7 @@ const Footer = () => {
               Always eager to learn, share knowledge, and collaborate on innovative projects.
             </p>
             
-            {/* Resume Download */}
-            <Button className="mb-4">
-              <Download className="w-4 h-4 mr-2" />
-              Download Resume
-            </Button>
+            
             
             {/* Contact Info */}
             <div className="space-y-1 text-sm text-muted-foreground">
