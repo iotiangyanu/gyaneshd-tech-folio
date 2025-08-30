@@ -6,23 +6,15 @@ import portfolioConfig from '@/config/portfolio.json';
 const ProfilesShowcase = () => {
   const profiles = [
     {
-      name: 'GitHub',
-      icon: Github,
-      description: 'Code Repository & Open Source',
-      url: portfolioConfig.profiles.github.url,
-      stats: 'View my projects & contributions',
-      color: 'text-gray-800 dark:text-gray-200',
-      bgColor: 'bg-gray-100 dark:bg-gray-800'
+      name: 'CodeChef',
+      icon: Trophy,
+      description: 'Competitive Programming',
+      url: portfolioConfig.profiles.codechef.url,
+      stats: 'Algorithm competitions & contests',
+      color: 'text-amber-600',
+      bgColor: 'bg-amber-50 dark:bg-amber-900/20'
     },
-    {
-      name: 'LinkedIn',
-      icon: Linkedin,
-      description: 'Professional Network',
-      url: portfolioConfig.profiles.linkedin.url,
-      stats: 'Connect with me professionally',
-      color: 'text-blue-600',
-      bgColor: 'bg-blue-50 dark:bg-blue-900/20'
-    },
+    
     {
       name: 'LeetCode',
       icon: Trophy,
@@ -42,13 +34,22 @@ const ProfilesShowcase = () => {
       bgColor: 'bg-green-50 dark:bg-green-900/20'
     },
     {
-      name: 'CodeChef',
-      icon: Trophy,
-      description: 'Competitive Programming',
-      url: portfolioConfig.profiles.codechef.url,
-      stats: 'Algorithm competitions & contests',
-      color: 'text-amber-600',
-      bgColor: 'bg-amber-50 dark:bg-amber-900/20'
+      name: 'GitHub',
+      icon: Github,
+      description: 'Code Repository & Open Source',
+      url: portfolioConfig.profiles.github.url,
+      stats: 'View my projects & contributions',
+      color: 'text-gray-800 dark:text-gray-200',
+      bgColor: 'bg-gray-100 dark:bg-gray-800'
+    },
+    {
+      name: 'LinkedIn',
+      icon: Linkedin,
+      description: 'Professional Network',
+      url: portfolioConfig.profiles.linkedin.url,
+      stats: 'Connect with me professionally',
+      color: 'text-blue-600',
+      bgColor: 'bg-blue-50 dark:bg-blue-900/20'
     },
     {
       name: 'Instagram',
