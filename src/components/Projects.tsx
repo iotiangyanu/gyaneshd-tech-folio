@@ -65,8 +65,8 @@ const Projects = () => {
         'Business intelligence concepts',
         'Data-driven decision making experience'
       ],
-      githubUrl: '#',
-      demoUrl: '#',
+      githubUrl: 'https://www.linkedin.com/posts/gyaneshhdwivedii_powerbi-datavisualization-businessintelligence-activity-7205071053662949376-tlU7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD685tQBRwnSvPRjC-48d-kAQmyEFC42ZeY',
+      demoUrl: 'https://www.linkedin.com/posts/gyaneshhdwivedii_powerbi-datavisualization-businessintelligence-activity-7205071053662949376-tlU7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD685tQBRwnSvPRjC-48d-kAQmyEFC42ZeY',
       status: 'Completed'
     }
   ];
