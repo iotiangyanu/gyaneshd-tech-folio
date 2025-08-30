@@ -161,8 +161,8 @@ const Education = () => {
           <h3 className="text-2xl font-bold text-center mb-8">Academic Journey</h3>
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">3+</div>
-              <div className="text-sm text-muted-foreground">Years in Engineering</div>
+              <div className="text-3xl font-bold text-primary mb-2">Final Year</div>
+              <div className="text-sm text-muted-foreground">Engineering Student</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-primary mb-2">70.7%</div>

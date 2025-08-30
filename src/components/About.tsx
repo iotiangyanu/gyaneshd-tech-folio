@@ -40,9 +40,7 @@ const About = () => {
           <div className="space-y-6">
             <div className="prose prose-lg max-w-none">
               <p className="text-lg leading-relaxed">
-                I am a computer science engineering (IoT) student and tech enthusiast with a passion for 
-                contributing my programming and problem-solving skills to meaningful projects. My journey 
-                in technology has been driven by curiosity and a desire to create innovative solutions.
+                I am a Computer Science Engineering (IoT) student and tech enthusiast with a passion for leveraging programming and problem-solving skills to contribute to impactful projects. My journey in technology has been shaped by curiosity and a commitment to developing innovative solutions.
               </p>
               
               <p className="text-lg leading-relaxed">
