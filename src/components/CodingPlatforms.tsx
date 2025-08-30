@@ -7,7 +7,7 @@ const CodingPlatforms = () => {
       name: 'LinkedIn',
       icon: Linkedin,
       description: 'Professional Network',
-      url: 'https://www.linkedin.com/in/gyaneshdwivedi/',
+      url: 'www.linkedin.com/in/gyaneshhdwivedii',
       stats: 'Connect with me',
       color: 'text-blue-600'
     },
@@ -15,7 +15,7 @@ const CodingPlatforms = () => {
       name: 'GitHub',
       icon: Github,
       description: 'Code Repository',
-      url: 'https://github.com/gyaneshdwivedi',
+      url: 'https://github.com/iotiangyanu',
       stats: 'View my projects',
       color: 'text-gray-800 dark:text-gray-200'
     },

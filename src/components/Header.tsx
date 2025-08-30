@@ -30,7 +30,7 @@ const Header = () => {
   };
 
 
-  
+
 
   const navItems = [
     { label: 'Home', id: 'hero' },
