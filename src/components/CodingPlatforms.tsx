@@ -3,19 +3,12 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const CodingPlatforms = () => {
   const platforms = [
-    {
-      name: 'LinkedIn',
-      icon: Linkedin,
-      description: 'Professional Network',
-      url: 'www.linkedin.com/in/gyaneshhdwivedii',
-      stats: 'Connect with me',
-      color: 'text-blue-600'
-    },
+    
     {
       name: 'GitHub',
       icon: Github,
       description: 'Code Repository',
-      url: 'https://github.com/iotiangyanu',
+      url: 'https://github.com/iotiangyanu/',
       stats: 'View my projects',
       color: 'text-gray-800 dark:text-gray-200'
     },

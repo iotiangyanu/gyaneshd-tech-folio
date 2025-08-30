@@ -70,13 +70,13 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: 'https://linkedin.com/in/gyaneshdwivedi',
+      href: 'https://www.linkedin.com/in/gyanesh-dwivedi-698604254/',
       color: 'hover:text-blue-600'
     },
     {
       icon: Github,
       label: 'GitHub',
-      href: 'https://github.com/gyaneshdwivedi',
+      href: 'https://github.com/gyaneshdwivedi/',
       color: 'hover:text-gray-800'
     },
     {
