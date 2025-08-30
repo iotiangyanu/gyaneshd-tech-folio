@@ -3,14 +3,13 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const CodingPlatforms = () => {
   const platforms = [
-    
     {
-      name: 'GitHub',
-      icon: Github,
-      description: 'Code Repository',
-      url: 'https://github.com/iotiangyanu/',
-      stats: 'View my projects',
-      color: 'text-gray-800 dark:text-gray-200'
+      name: 'CodeChef',
+      icon: Trophy,
+      description: 'Competitive Programming',
+      url: 'https://www.codechef.com/users/gyaneshdwivedi',
+      stats: 'Algorithm Expert',
+      color: 'text-amber-600'
     },
     {
       name: 'LeetCode',
@@ -29,12 +28,12 @@ const CodingPlatforms = () => {
       color: 'text-green-600'
     },
     {
-      name: 'CodeChef',
-      icon: Trophy,
-      description: 'Competitive Programming',
-      url: 'https://www.codechef.com/users/gyaneshdwivedi',
-      stats: 'Algorithm Expert',
-      color: 'text-amber-600'
+      name: 'GitHub',
+      icon: Github,
+      description: 'Code Repository',
+      url: 'https://github.com/iotiangyanu/',
+      stats: 'View my projects',
+      color: 'text-gray-800 dark:text-gray-200'
     }
   ];
 
