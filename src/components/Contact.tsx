@@ -76,7 +76,7 @@ const Contact = () => {
     {
       icon: Github,
       label: 'GitHub',
-      href: 'https://github.com/gyaneshdwivedi/',
+      href: 'https://github.com/iotiangyanu/',
       color: 'hover:text-gray-800'
     },
     {
