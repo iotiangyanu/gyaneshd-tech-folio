@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
@@ -12,6 +13,12 @@ import Footer from '@/components/Footer';
 import Background3D from '@/components/Background3D';
 
 const Index = () => {
+  useEffect(() => {
+    // Apply dark theme by default
+    document.documentElement.classList.add('dark');
+    document.body.style.backgroundColor = 'hsl(210, 20%, 8%)';
+  }, []);
+
   return (
     <div className="min-h-screen relative">
       <Background3D />

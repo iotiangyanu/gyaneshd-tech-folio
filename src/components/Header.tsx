@@ -6,7 +6,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Menu, X, Download, Github, Linkedin, Code, Trophy, Instagram, ExternalLink } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Code, Trophy, Instagram, ExternalLink } from 'lucide-react';
+import portfolioConfig from '@/config/portfolio.json';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,32 +45,32 @@ const Header = () => {
   const socialLinks = [
     {
       label: 'GitHub',
-      href: 'https://github.com/iotiangyanu',
+      href: portfolioConfig.profiles.github.url,
       icon: Github
     },
     {
       label: 'LeetCode',
-      href: 'https://leetcode.com/u/gyaneshdwivedi/',
+      href: portfolioConfig.profiles.leetcode.url,
       icon: Trophy
     },
     {
       label: 'GeeksforGeeks',
-      href: 'https://www.geeksforgeeks.org/user/gyaneshdwivedi/',
+      href: portfolioConfig.profiles.geeksforgeeks.url,
       icon: Code
     },
     {
       label: 'CodeChef',
-      href: 'https://www.codechef.com/users/gyaneshdwivedi',
+      href: portfolioConfig.profiles.codechef.url,
       icon: Trophy
     },
     {
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/gyanesh-dwivedi-698604254/',
+      href: portfolioConfig.profiles.linkedin.url,
       icon: Linkedin
     },
     {
       label: 'Instagram',
-      href: 'https://www.instagram.com/dwivedi__gyanu?igsh=ZmZjNnpkOGt2N2h4',
+      href: portfolioConfig.profiles.instagram.url,
       icon: Instagram
     }
   ];
@@ -124,10 +125,6 @@ const Header = () => {
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
-          <Button variant="outline" size="sm">
-            <Download className="w-4 h-4 mr-2" />
-            Resume
-          </Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -172,10 +169,6 @@ const Header = () => {
                 </div>
               </div>
             </div>
-            <Button variant="outline" size="sm" className="w-full">
-              <Download className="w-4 h-4 mr-2" />
-              Download Resume
-            </Button>
           </div>
         </div>
       )}

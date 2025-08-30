@@ -1,0 +1,39 @@
+{
+  "personal": {
+    "name": "Gyanesh Dwivedi",
+    "title": "CSE (IoT) Student & Tech Enthusiast",
+    "heroImage": "/lovable-uploads/1671af2b-31af-4eb7-ae83-d4a2ebe8995f.png",
+    "description": "A computer science engineering (IoT) student and tech enthusiast interested in contributing my programming and problem-solving skills. I have technical skills in different tech fields and love showcasing my talent through innovative projects."
+  },
+  "profiles": {
+    "github": {
+      "url": "https://github.com/iotiangyanu",
+      "username": "iotiangyanu"
+    },
+    "linkedin": {
+      "url": "https://www.linkedin.com/in/gyanesh-dwivedi-698604254/",
+      "username": "gyanesh-dwivedi-698604254"
+    },
+    "leetcode": {
+      "url": "https://leetcode.com/u/gyaneshdwivedi/",
+      "username": "gyaneshdwivedi"
+    },
+    "geeksforgeeks": {
+      "url": "https://www.geeksforgeeks.org/user/gyaneshdwivedi/",
+      "username": "gyaneshdwivedi"
+    },
+    "codechef": {
+      "url": "https://www.codechef.com/users/gyaneshdwivedi",
+      "username": "gyaneshdwivedi"
+    },
+    "instagram": {
+      "url": "https://www.instagram.com/dwivedi__gyanu/",
+      "username": "dwivedi__gyanu"
+    }
+  },
+  "stats": {
+    "projects": "3+",
+    "studentsTrained": "300+",
+    "problemsSolved": "50+"
+  }
+}

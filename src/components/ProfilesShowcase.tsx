@@ -1,6 +1,7 @@
 import { Github, Linkedin, Trophy, Code, Instagram, ExternalLink } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import portfolioConfig from '@/config/portfolio.json';
 
 const ProfilesShowcase = () => {
   const profiles = [
@@ -8,7 +9,7 @@ const ProfilesShowcase = () => {
       name: 'GitHub',
       icon: Github,
       description: 'Code Repository & Open Source',
-      url: 'https://github.com/iotiangyanu',
+      url: portfolioConfig.profiles.github.url,
       stats: 'View my projects & contributions',
       color: 'text-gray-800 dark:text-gray-200',
       bgColor: 'bg-gray-100 dark:bg-gray-800'
@@ -17,7 +18,7 @@ const ProfilesShowcase = () => {
       name: 'LinkedIn',
       icon: Linkedin,
       description: 'Professional Network',
-      url: 'https://www.linkedin.com/in/gyanesh-dwivedi-698604254/',
+      url: portfolioConfig.profiles.linkedin.url,
       stats: 'Connect with me professionally',
       color: 'text-blue-600',
       bgColor: 'bg-blue-50 dark:bg-blue-900/20'
@@ -26,7 +27,7 @@ const ProfilesShowcase = () => {
       name: 'LeetCode',
       icon: Trophy,
       description: 'Coding Practice & DSA',
-      url: 'https://leetcode.com/u/gyaneshdwivedi/',
+      url: portfolioConfig.profiles.leetcode.url,
       stats: 'Problem solving expertise',
       color: 'text-orange-500',
       bgColor: 'bg-orange-50 dark:bg-orange-900/20'
@@ -35,7 +36,7 @@ const ProfilesShowcase = () => {
       name: 'GeeksforGeeks',
       icon: Code,
       description: 'Technical Articles & Learning',
-      url: 'https://www.geeksforgeeks.org/user/gyaneshdwivedi/',
+      url: portfolioConfig.profiles.geeksforgeeks.url,
       stats: 'Explore my technical journey',
       color: 'text-green-600',
       bgColor: 'bg-green-50 dark:bg-green-900/20'
@@ -44,7 +45,7 @@ const ProfilesShowcase = () => {
       name: 'CodeChef',
       icon: Trophy,
       description: 'Competitive Programming',
-      url: 'https://www.codechef.com/users/gyaneshdwivedi',
+      url: portfolioConfig.profiles.codechef.url,
       stats: 'Algorithm competitions & contests',
       color: 'text-amber-600',
       bgColor: 'bg-amber-50 dark:bg-amber-900/20'
@@ -53,7 +54,7 @@ const ProfilesShowcase = () => {
       name: 'Instagram',
       icon: Instagram,
       description: 'Personal Updates & Insights',
-      url: 'https://www.instagram.com/dwivedi__gyanu?igsh=ZmZjNnpkOGt2N2h4',
+      url: portfolioConfig.profiles.instagram.url,
       stats: 'Follow my journey',
       color: 'text-pink-600',
       bgColor: 'bg-pink-50 dark:bg-pink-900/20'
@@ -124,15 +125,15 @@ const ProfilesShowcase = () => {
               <div className="text-sm text-muted-foreground">Active Platforms</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">300+</div>
+              <div className="text-3xl font-bold text-primary mb-2">{portfolioConfig.stats.studentsTrained}</div>
               <div className="text-sm text-muted-foreground">Students Trained</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">50+</div>
+              <div className="text-3xl font-bold text-primary mb-2">{portfolioConfig.stats.problemsSolved}</div>
               <div className="text-sm text-muted-foreground">Problems Solved</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">3+</div>
+              <div className="text-3xl font-bold text-primary mb-2">{portfolioConfig.stats.projects}</div>
               <div className="text-sm text-muted-foreground">Projects Completed</div>
             </div>
           </div>
