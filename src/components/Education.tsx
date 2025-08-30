@@ -9,7 +9,6 @@ const Education = () => {
       institution: 'Raj Kumar Goel Institute of Technology',
       location: 'Ghaziabad, Uttar Pradesh',
       duration: '2022 - 2026',
-      status: 'up to 5th Semester',
       type: 'Bachelor\'s Degree',
       icon: GraduationCap,
       highlights: [
