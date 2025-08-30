@@ -46,8 +46,8 @@ const Projects = () => {
         'Cloud database management skills',
         'Real-time data processing knowledge'
       ],
-      githubUrl: '#',
-      demoUrl: '#',
+      githubUrl: 'https://www.linkedin.com/in/gyanesh-dwivedi-698604254/',
+      demoUrl: 'https://www.linkedin.com/in/gyanesh-dwivedi-698604254/',
       status: 'Completed'
     },
     {
