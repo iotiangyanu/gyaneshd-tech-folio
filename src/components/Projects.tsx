@@ -27,8 +27,8 @@ const Projects = () => {
         'Gained experience in mobile app development',
         'Understanding of hardware-software integration'
       ],
-      githubUrl: '#',
-      demoUrl: '#',
+      githubUrl: 'https://www.linkedin.com/posts/gyaneshhdwivedii_iot-robotics-wificontrol-activity-7196922131031465985-PP5s?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD685tQBRwnSvPRjC-48d-kAQmyEFC42ZeY',
+      demoUrl: 'https://www.linkedin.com/posts/gyaneshhdwivedii_iot-robotics-wificontrol-activity-7196922131031465985-PP5s?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD685tQBRwnSvPRjC-48d-kAQmyEFC42ZeY',
       status: 'Completed'
     },
     {
