@@ -23,7 +23,7 @@ const Footer = () => {
     {
       icon: Github,
       label: 'GitHub',
-      href: 'https://github.com/gyaneshdwivedi'
+      href: 'https://github.com/iotiangyanu/'
     },
     {
       icon: Code,
