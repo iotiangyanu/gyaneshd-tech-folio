@@ -71,12 +71,13 @@ const Hero = () => {
           {/* Right Content - Profile Image */}
           <div className="flex justify-center lg:justify-end animate-slide-in-right">
             <div className="relative">
-              <div className="w-80 h-80 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 p-2">
+              <div className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 p-2">
                 <div className="w-full h-full rounded-full bg-gradient-to-br from-primary to-accent p-1">
                   <img 
                     src="/src/assets/profile-photo.jpg" 
-                    alt="Gyanesh Dwivedi - CSE IoT Student" 
-                    className="w-full h-full rounded-full object-cover animate-float"
+                    alt="Gyanesh Dwivedi - CSE IoT Student and Tech Enthusiast" 
+                    className="w-full h-full rounded-full object-cover object-center animate-float"
+                    loading="eager"
                   />
                 </div>
               </div>

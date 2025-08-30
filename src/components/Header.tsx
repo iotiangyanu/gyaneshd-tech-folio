@@ -1,7 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { Menu, X, Download, Github, Linkedin, Code, FileText, Trophy, MapPin } from 'lucide-react';
+import { 
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { Menu, X, Download, Github, Linkedin, Code, Trophy, Instagram, ExternalLink } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,11 +35,43 @@ const Header = () => {
     { label: 'Home', id: 'hero' },
     { label: 'About', id: 'about' },
     { label: 'Skills', id: 'skills' },
-    { label: 'Platforms', id: 'platforms' },
     { label: 'Projects', id: 'projects' },
     { label: 'Education', id: 'education' },
     { label: 'Experience', id: 'experience' },
     { label: 'Contact', id: 'contact' }
+  ];
+
+  const socialLinks = [
+    {
+      label: 'GitHub',
+      href: 'https://github.com/iotiangyanu',
+      icon: Github
+    },
+    {
+      label: 'LeetCode',
+      href: 'https://leetcode.com/u/gyaneshdwivedi/',
+      icon: Trophy
+    },
+    {
+      label: 'GeeksforGeeks',
+      href: 'https://www.geeksforgeeks.org/user/gyaneshdwivedi/',
+      icon: Code
+    },
+    {
+      label: 'CodeChef',
+      href: 'https://www.codechef.com/users/gyaneshdwivedi',
+      icon: Trophy
+    },
+    {
+      label: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/gyanesh-dwivedi-698604254/',
+      icon: Linkedin
+    },
+    {
+      label: 'Instagram',
+      href: 'https://www.instagram.com/dwivedi__gyanu?igsh=ZmZjNnpkOGt2N2h4',
+      icon: Instagram
+    }
   ];
 
   return (
@@ -62,29 +99,32 @@ const Header = () => {
           ))}
         </div>
 
-        {/* Social Links & Resume Button */}
+        {/* Profiles Dropdown & Resume Button */}
         <div className="hidden md:flex items-center space-x-4">
-          <TooltipProvider>
-            {socialLinks.map((link) => (
-              <Tooltip key={link.label}>
-                <TooltipTrigger asChild>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="sm">
+                Profiles
+                <ExternalLink className="w-4 h-4 ml-2" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-56">
+              {socialLinks.map((link) => (
+                <DropdownMenuItem key={link.label} asChild>
                   <a
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 hover:text-primary transition-colors"
-                    aria-label={link.label}
+                    className="flex items-center gap-2 cursor-pointer"
                   >
-                    <link.icon className="w-5 h-5" />
+                    <link.icon className="w-4 h-4" />
+                    {link.label}
                   </a>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{link.label}</p>
-                </TooltipContent>
-              </Tooltip>
-            ))}
-          </TooltipProvider>
-          <Button variant="outline" size="sm" className="ml-4">
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+          <Button variant="outline" size="sm">
             <Download className="w-4 h-4 mr-2" />
             Resume
           </Button>
@@ -113,19 +153,24 @@ const Header = () => {
                 {item.label}
               </button>
             ))}
-            <div className="flex items-center space-x-4 pt-4 border-t">
-              {socialLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 hover:text-primary transition-colors"
-                  aria-label={link.label}
-                >
-                  <link.icon className="w-5 h-5" />
-                </a>
-              ))}
+            <div className="pt-4 border-t">
+              <div className="mb-4">
+                <h4 className="font-semibold mb-2">Profiles</h4>
+                <div className="grid grid-cols-2 gap-2">
+                  {socialLinks.map((link) => (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 p-2 rounded-lg hover:bg-primary/10 transition-colors text-sm"
+                    >
+                      <link.icon className="w-4 h-4" />
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
             <Button variant="outline" size="sm" className="w-full">
               <Download className="w-4 h-4 mr-2" />
