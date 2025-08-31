@@ -1,6 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import Section3DDecoration from '@/components/Section3DDecoration';
 
 const Skills = () => {
   const skillCategories = [
@@ -57,9 +56,8 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 relative overflow-hidden">
-      <Section3DDecoration variant="skills" />
-      <div className="container mx-auto px-4 relative z-10">
+    <section id="skills" className="py-20">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Skills & Expertise</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -70,7 +68,7 @@ const Skills = () => {
         {/* Technical Skills */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {skillCategories.map((category, categoryIndex) => (
-            <Card key={category.category} className="animate-fade-in hover-lift glass-effect transform-3d" style={{animationDelay: `${categoryIndex * 0.1}s`}}>
+            <Card key={category.category} className="animate-fade-in" style={{animationDelay: `${categoryIndex * 0.1}s`}}>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-4">{category.category}</h3>
                 <div className="flex flex-wrap gap-3">

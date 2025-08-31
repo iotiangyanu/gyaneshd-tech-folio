@@ -7,7 +7,6 @@ import { Github, ExternalLink, Cpu, CloudRain, BarChart3, Eye } from 'lucide-rea
 import esp8266Image from '@/assets/esp8266-robot.jpg';
 import weatherImage from '@/assets/weather-monitoring.jpg';
 import airlineImage from '@/assets/airline-dashboard.jpg';
-import Section3DDecoration from '@/components/Section3DDecoration';
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<any>(null);
@@ -73,9 +72,8 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-secondary/30 relative overflow-hidden">
-      <Section3DDecoration variant="projects" />
-      <div className="container mx-auto px-4 relative z-10">
+    <section id="projects" className="py-20 bg-secondary/30">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -87,7 +85,7 @@ const Projects = () => {
           {projects.map((project) => (
             <Card 
               key={project.id} 
-              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer hover-lift transform-3d gpu-accelerated"
+              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
               onClick={() => setSelectedProject(project)}
             >
               <CardHeader className="pb-4">

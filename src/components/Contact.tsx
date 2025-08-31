@@ -6,7 +6,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Code, FileText, Trophy } from 'lucide-react';
-import Section3DDecoration from '@/components/Section3DDecoration';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -101,9 +100,8 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 relative overflow-hidden">
-      <Section3DDecoration variant="contact" />
-      <div className="container mx-auto px-4 relative z-10">
+    <section id="contact" className="py-20">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -182,7 +180,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <Card className="p-6 hover-lift transform-3d gpu-accelerated">
+          <Card className="p-6">
             <CardHeader className="px-0 pt-0">
               <CardTitle className="text-xl">Send a Message</CardTitle>
             </CardHeader>
