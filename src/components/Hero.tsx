@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Eye } from 'lucide-react';
 import portfolioConfig from '@/config/portfolio.json';
+import HeroInteractive3D from '@/components/HeroInteractive3D';
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -11,8 +12,9 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-secondary/30 to-primary/10 pt-20">
-      <div className="container mx-auto px-4 py-16">
+    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-secondary/30 to-primary/10 pt-20 relative overflow-hidden">
+      <HeroInteractive3D />
+      <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="animate-fade-in">

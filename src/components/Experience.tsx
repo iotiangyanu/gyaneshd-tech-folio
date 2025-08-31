@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Users, BookOpen, Trophy, Calendar, MapPin, Lightbulb } from 'lucide-react';
+import Section3DDecoration from '@/components/Section3DDecoration';
 
 const Experience = () => {
   const experiences = [
@@ -79,8 +80,9 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-secondary/30">
-      <div className="container mx-auto px-4">
+    <section id="experience" className="py-20 bg-secondary/30 relative overflow-hidden">
+      <Section3DDecoration variant="experience" />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience & Leadership</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -92,7 +94,10 @@ const Experience = () => {
         <div className="mb-16">
           <div className="space-y-8 max-w-5xl mx-auto">
             {experiences.map((exp, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300">
+              <Card 
+                key={index} 
+                className="overflow-hidden hover:shadow-xl transition-all duration-300 hover-lift transform-3d"
+              >
                 <CardHeader className="bg-gradient-to-r from-primary/5 to-accent/5">
                   <div className="flex items-start justify-between">
                     <div className="flex items-center gap-4">
@@ -173,7 +178,10 @@ const Experience = () => {
           <h3 className="text-2xl font-bold text-center mb-8">Impact & Reach</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {impactStats.map((stat, index) => (
-              <Card key={index} className="text-center p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <Card 
+                key={index} 
+                className="text-center p-6 hover:shadow-lg transition-all duration-300 hover-lift neon-border gpu-accelerated"
+              >
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-6 h-6 text-primary" />
                 </div>

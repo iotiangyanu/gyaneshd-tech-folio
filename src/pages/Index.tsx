@@ -11,6 +11,7 @@ import Experience from '@/components/Experience';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import Background3D from '@/components/Background3D';
+import MouseFollower3D from '@/components/MouseFollower3D';
 
 const Index = () => {
   useEffect(() => {
@@ -20,10 +21,11 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative perspective overflow-x-hidden">
+      <MouseFollower3D />
       <Background3D />
       <Header />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <About />
         <Skills />
