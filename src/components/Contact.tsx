@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Code, FileText, Trophy } from 'lucide-react';
 
 const Contact = () => {
@@ -26,18 +27,36 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for your message. I'll get back to you soon!",
+      // Call the edge function to send emails and save to database
+      const { data, error } = await supabase.functions.invoke('send-contact-message', {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
       });
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch (error) {
+
+      if (error) {
+        console.error('Function error:', error);
+        throw new Error('Failed to send message');
+      }
+
+      // Show success message with emojis and warm tone
       toast({
-        title: "Error",
-        description: "Something went wrong. Please try again.",
+        title: "🎉 Message Sent Successfully!",
+        description: "Thank you so much for reaching out! 😊 I'll get back to you within 24-48 hours. Check your email for a confirmation! ✨",
+      });
+      
+      // Clear the form
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      
+    } catch (error) {
+      console.error('Submit error:', error);
+      toast({
+        title: "😔 Oops! Something went wrong",
+        description: "I'm sorry, but your message couldn't be sent right now. Please try again or email me directly at g.dwivedi8924@gmail.com",
         variant: "destructive",
       });
     } finally {
