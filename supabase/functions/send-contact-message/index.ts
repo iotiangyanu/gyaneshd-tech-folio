@@ -31,19 +31,20 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Processing contact form submission:", { name, email, subject });
 
-    // Save message to database
-    const { error: dbError } = await supabase
-      .from('message')
-      .insert({
-        name,
-        email,
-        message: `Subject: ${subject}\n\n${message}`
+    // Save message to database using secure function
+    const { data: messageId, error: dbError } = await supabase
+      .rpc('insert_contact_message', {
+        p_name: name,
+        p_email: email,
+        p_message: `Subject: ${subject}\n\n${message}`
       });
 
     if (dbError) {
       console.error("Database error:", dbError);
       throw new Error("Failed to save message");
     }
+
+    console.log("Message saved with ID:", messageId);
 
     // Send confirmation email to visitor with warm greeting
     const confirmationEmailHtml = `
