@@ -165,8 +165,8 @@ const Education = () => {
               <div className="text-sm text-muted-foreground">Engineering Student</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">70.7%</div>
-              <div className="text-sm text-muted-foreground">Upto 5th Semester</div>
+              <div className="text-3xl font-bold text-primary mb-2">71.32%</div>
+              <div className="text-sm text-muted-foreground">Upto 6th Semester</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-primary mb-2">3</div>
